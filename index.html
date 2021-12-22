@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- SEO#0: find a way to render HTML faster, for both users and search engine bots, 'bot friendly HTML' -->
+	<!--
+		concepts to know are:
+		1. CTR: click-through-rate (how likely a user is to clink on a link displayed in SERP)
+		2. Bounce: when user clicks away after shortly looking at your site (bad), you want users to dwell for longer
+		3. Dwell time: basically retention, how long a user stays on your website
+	-->
+
+	<!-- SEO#1: use schema markup using JSON-LD, you can also use them directly on HTML via microdata -->
+	<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Article",
+		"name": "Title of your article",
+		"author": "Will Smith"
+		"description": "A really good selling point here",
+		"datePublished" : "2021-11-16",
+		"image" : "imageYouWantToShow.jpg"
+	}
+	</script>
+	
+	<!-- SEO#2: meta tags -->
+	<!-- meta data, also used by search engines to get details about website -->
+
+	<!-- standard meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- meta tags to make your selling point -->
+	<meta name="keywords" content="HTML, CSS, JavaScript, Learn HTML SEO">
+	<meta name="author" content="Will Smith">
+	<meta name="description" content="what is this site about? make a selling point here">
+
+	<!-- meta tags for social media sites -->
+	<!-- open graph (facebook) -->
+	<meta property="og:title" content="This title will appear when shared in FB">
+	<meta property="og:description" content="This description will appear when shared in FB">
+	<meta property="og:type" content="article"> <!-- by default it is set to content="website"  -->
+	<meta property="og:image" content="something.jpg"> <!-- this image will appear when shared in FB -->
+
+	<!-- twitter cards -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@yourTwitterLink">
+	<meta name="twitter:title" content="Title of your page">
+	<meta name="twitter:description" content="Description of your page">
+	<meta name="twitter:image" content="something.jpg">
+
+	<!-- SEO#3: canonical and robots tag -->
+	<!-- canonical tag, this is used by search engines to know which one is the master copy of your page -->
+	<!-- canonical link is a URL that is chosen as the 'master' URL for a set of duplicate pages -->
+	<!-- an indication as to which version of a page should be displayed on the SERPs (search engine results page) -->
+	<link rel="canonical" href="https://YourMainLink.com">
+
+	<!-- meta robots tag, ONLY USE THIS FOR SUBPAGES that is not ur MAIN attraction web page -->
+	<!-- for example: https://YourMainLink.com/SomethingElse -->
+	<meta name="robots" content="noindex, nofollow">
+
+	<!--
+		noindex — page should not be indexed
+		nofollow — links on the page should not be followed
+		follow — links on the page should be followed, even if the page is not to be indexed
+		noimageindex — images on the page should not be indexed
+		noarchive — search results should not show a cached version of the page
+		unavailable_after — page should not be indexed beyond a certain date.
+	 -->
+
+	<!-- 
+		In this instance, search engines will not index the content nor follow any of the links
+		You want to be careful when using these HTML tags for SEO, though. 
+		You dont want to accidentally hurt your rankings for the particular page
+	 -->
+
+	<!-- SEO #4: title tag -->
+	<!-- this title will appear in search engines -->
+	<!-- keep it short, roughly 60 characters, brand name, keywords, proper expecation -->
+	<!-- viewer retention = higher ranking -->
+	<title>Make a selling point title here</title>
+</head>
+<body>
+	<!-- SEO#5: use semantic tags instead of divs wherever possible, use aria tags in <divs> where possible -->
+	
+	<header><!-- use this tag to represent introductory elements, typically the top navbar as well -->
+		<!-- navigation links should be under this tag -->
+		<nav>
+			<!-- SEO#6: links and anchor tag text matters! "what is the link about?"-->
+			<a href="another-page.html">put a really good anchor text here! (SEO)</a>
+
+			<!-- SEO#7:  no follow and do follow links -->
+			<!-- it is a good practice to have a mixture of both dofollow and no follow links -->
+			<!-- links are set to dofollow by default -->
+			<a href="anotherWebsiteOfMine.com"></a>
+
+			<!-- use nofollow if external linked website is not your friend lol -->
+			<!-- or when the external linked is completely unrelated to your website -->
+			<a rel="nofollow" href="http://raventools.com">great seo tools</a>
+		</nav>
+	</header>
+
+	<!-- UNIQUE main content of a web page should be under this tag, should not be repeated in other HTML tags -->
+	<main>
+		<article> <!-- blogs, stories, articles, news, etc. should be under this tag -->
+			<!-- there should only be one h1 tag in your page -->
+			<h1>The main selling point or title of the article</h1>
+			<p>something to describe it</p>
+			<p>something else to describe it</p>
+			<hr>
+
+			<section> <!-- use this tag to  group together related elements -->
+				<h2>use h2 for section subheadings</h2>
+				<p>something here</p>
+				<h3>then use h3 for subsections</h3>
+				<p>dont worry, we can always beautify this using CSS, we are more concern about SEO in HTML</p>
+			</section>
+
+			<section>
+				<p>this section will contain image</p>
+				<figure> <!-- use this tag for self-contained elements like, pics, vids, gifs, other media, etc-->
+					<!-- SEO #8: image alt descriptions -->
+					<img src="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="describe what this picture is about, helps search engine indentifies it">
+					<figcaption>a rendered description of the picture</figcaption>
+				</figure>
+			</section>
+
+			<section>
+				<blockquote> <!-- use this tag to containt direct quotations like customer reviews, feedbacks, etc..-->
+					<p>This is a customer review</p>
+					<footer>-Name of said cusomter</footer>
+				</blockquote>
+			</section>
+
+		</article>
+	</main>
+
+	<footer>
+		<nav>
+			<div>basically bottom navigation bar here</div>
+		</nav>
+		<aside>
+			<!-- use this tag to wrap content INDIRECTLY related to the main content-->
+			<!-- this can contain, author names, other info, related links, related contents, ads, etc. -->
+		</aside>
+	</footer>
+</body>
+</html>
