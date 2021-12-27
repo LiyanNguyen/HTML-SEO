@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Using Semantic Inline Text in HTML 5</title>
+</head>
+<body>
+	<!-- Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text -->
+
+	<!-- List of Content Sectioning Elements: (29 total)
+	
+	-->
+
+	
+	<!-- <a> anchor element with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address -->
+	<a href="https://example.com">Website</a>
+	
+	<hr>
+	<!-- <abbr> represents an abbreviation or acronym; the optional title attribute can provide an expansion or description for the abbreviation. If present, title must contain this full description and nothing else -->
+	<p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+	
+	<hr>
+	<!-- <b> is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance. This was formerly known as the Boldface element, and most browsers still draw the text in boldface -->
+	<p>The two most popular science courses offered by the school are <b >chemistry</b> (the study of chemicals and the composition of substances) and <b>physics</b> (the study of the nature and properties of matter and energy).</p>
+
+	<hr>
+	<!-- <bdi> tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text. It's particularly useful when a website dynamically inserts some text and doesn't know the directionality of the text being inserted. -->
+	<h3>World wrestling championships</h3>
+	<ul>
+		<li><bdi>Evil Steven</bdi>: 1st place</li>
+		<li><bdi>François fatale</bdi>: 2nd place</li>
+		<li><span>تیز سمی</span>: 3rd place</li>
+		<li><bdi>الرجل القوي إيان</bdi>: 4th place</li>
+		<li><span dir="auto">تیز سمی</span>: 5th place</li>
+	</ul>
+
+	<hr>
+	<!-- <bdo> overrides the current directionality of text, so that the text within is rendered in a different direction. -->
+	<h3>Famous seaside songs</h1>
+	<p>The English song "Oh I do like to be beside the seaside"</p>
+	<p>Looks like this in Hebrew: <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span></p>
+	<p>In the computer's memory, this is stored as <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo></p>
+	<!-- Switch text direction -->
+	<p>This text will go left to right.</p>
+	<p><bdo dir="rtl">This text will go right to left.</bdo></p>
+
+	<hr>
+	<!-- <br> produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant -->
+	<p> O'er all the hilltops<br>
+		Is quiet now,<br>
+		In all the treetops<br>
+		Hearest thou<br>
+		Hardly a breath;<br>
+		The birds are asleep in the trees:<br>
+		Wait, soon like these<br>
+		Thou too shalt rest.
+	</p>
+
+	<hr>
+	<!-- <cite> is used to describe a reference to a cited creative work, and must include the title of that work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata -->
+	<figure>
+		<blockquote>
+				<p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+		</blockquote>
+		<figcaption>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).</figcaption>
+	</figure>
+
+	<hr>
+	<!-- <code> displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. By default, the content text is displayed using the user agent's default monospace font -->
+	<p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>
+
+	<hr>
+	<!-- <data> links a given piece of content with a machine-readable translation. If the content is time- or date-related, the <time> element must be used -->
+	<!-- The following example displays product names but also associates each name with a product number -->
+	<p>New Products:</p>
+	<ul>
+		<li><data value="398">Mini Ketchup</data></li>
+		<li><data value="399">Jumbo Ketchup</data></li>
+		<li><data value="400">Mega Jumbo Ketchup</data></li>
+	</ul>
+
+	<hr>
+	<!-- <dfn> is used to indicate the term being defined within the context of a definition phrase or sentence. The <p> element, the <dt>/<dd> pairing, or the <section> element which is the nearest ancestor of the <dfn> is considered to be the definition of the term. -->
+	<p>A <dfn>validator</dfn> is a program that checks for syntax errors in code or documents.</p>
+	
+	<hr>
+	<!-- <em> marks text that has stress emphasis. The <em> element can be nested, with each level of nesting indicating a greater degree of emphasis. A screen reader will pronounce the words in <em> with an emphasis, using verbal stress! -->
+	<p>Get out of bed <em>now</em>!</p>
+	<p>We <em>had</em> to do something about it.</p>
+	<p>This is <em>not</em> a drill!</p>
+	<p>
+		In HTML 5, what was previously called
+		<em>block-level</em> content is now called
+		<em>flow</em> content.
+	</p>
+
+	<hr>
+	<!-- <i> represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the <i> naming of this element -->
+	<p>I looked at it and thought <i>This can't be real!</i></p>
+	<p><i class="latin">Musa</i> is one of two or three genera in the family <i class="latin">Musaceae</i>; it includes bananas and plantains.</p>
+	<p>The term <i>bandwidth</i> describes the measure of how much information can pass through a data connection in a given amount of time.</p>
+	
+	<hr>
+	<!-- The <kbd> represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the user agent defaults to rendering the contents of a <kbd> element using its default monospace font, although this is not mandated by the HTML standard -->
+	<p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
+
+	<hr>
+	<!-- <mark> represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context. Don't confuse <mark> with the <strong> element; <mark> is used to denote content which has a degree of relevance, while <strong> indicates spans of text of importance -->
+	<p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
+	<p>Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+	<blockquote>
+		It is a period of civil war. Rebel spaceships, striking from a
+		hidden base, have won their first victory against the evil
+		Galactic Empire. During the battle, <mark>Rebel spies managed
+		to steal secret plans</mark> to the Empire's ultimate weapon,
+		the DEATH STAR, an armored space station with enough power to
+		destroy an entire planet.
+	</blockquote>
+
+	<hr>
+	<!-- <q> indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the <blockquote> element -->
+	<p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I'm sorry, Dave. I'm afraid I can't do that.</q></p>
+
+	<hr>
+	<!-- <ruby> represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common. -->
+	<p>
+		<ruby style="font-size: 2em">
+			漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+			字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+		</ruby>
+	</p>
+	<p>
+		<ruby style="font-size: 2em">
+			明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+		</ruby>
+	</p>
+	<!-- <rp> is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the <ruby> element. One <rp> element should enclose each of the opening and closing parentheses that wrap the <rt> element that contains the annotation's text -->
+	<!-- <rt> specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. -->
+
+	<hr>
+	<!-- <s> renders text with a strikethrough, or a line through it. Use the <s> element to represent things that are no longer relevant or no longer accurate. However, <s> is not appropriate when indicating document edits; for that, use the <del> and <ins> elements, as appropriate -->
+	<p><s>There will be a few tickets available at the box office tonight.</s></p>
+	<p>SOLD OUT!</p>
+	
+
+	<hr>
+	<!--  <samp> is used to enclose inline text which represents sample (or quoted) output from a computer program. Its contents are typically rendered using the browser's default monospaced font (such as Courier or Lucida Console) -->
+	<p>I was trying to boot my computer, but I got this hilarious message:</p>
+	<p><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+
+	<hr>
+	<!-- <small> represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from small to x-small. -->
+	<p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
+	<p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
+
+	<hr>
+	<!-- <span> is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline element -->
+	<p>Add the <span style="color: #f00;">basil</span>, <span style="color: #f00;">pine nuts</span> and <span style="color: #f00;">garlic</span> to a blender and blend into a paste.</p>
+	<p>Gradually add the <span style="color: #f00;">olive oil</span> while running the blender slowly.</p>
+
+	<hr>
+	<!-- <strong> indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type -->
+	<p>... the most important rule, the rule you can never forget, no matter how much he cries, no matter how much he begs: <strong>never feed him after midnight</strong>.</p>
+	<!-- <strong> element is for content that is of greater importance, while the <b> element is used to draw attention to text without indicating that it's more important! -->
+	
+	<hr>
+	<!-- <sub> specifies inline text which should be displayed as subscript for solely typographical reasons. Subscripts are typically rendered with a lowered baseline using smaller text -->
+	<p>Almost every developer's favorite molecule is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
+
+	<hr>
+	<!-- <sup> specifies inline text which is to be displayed as superscript for solely typographical reasons. Superscripts are usually rendered with a raised baseline using smaller text -->
+	<p>The <b>Pythagorean theorem</b> is often expressed as the following equation:</p>
+	<p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+
+	<hr>
+	<!-- <time> represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders. -->
+	<p>The Cure will be celebrating their 40th anniversary on <time style="font-weight: bold" datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+	<p>The concert starts at <time style="font-weight: bold" datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least <time style="font-weight: bold" datetime="PT2H30M">2h 30m</time>.</p>
+
+	<hr>
+	<!-- <u> represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS. -->
+	<p>You could use this element to highlight <u>speling</u> mistakes, so the writer can <u>corect</u> them.</p>
+	<!-- Avoid using the <u> element with its default styling (of underlined text) in such a way as to be confused with a hyperlink, which is also underlined by default -->
+	<!-- Valid use cases for the <u> element include annotating spelling errors, applying a proper name mark to denote proper names in Chinese text, and other forms of annotation -->
+	<!-- You should not use <u> to underline text for presentation purposes, or to denote titles of books. -->
+
+	<hr>
+	<!-- <var> represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent. -->
+	<p>The volume of a box is <var style="font-weight: bold">l</var> × <var style="font-weight: bold">w</var> × <var style="font-weight: bold">h</var>, where <var style="font-weight: bold">l</var> represents the length, <var style="font-weight: bold">w</var> the width and <var style="font-weight: bold">h</var> the height of the box.</p>
+
+	<hr>
+	<!-- <wbr> represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location, specifies where in a text it would be ok to add a line-break -->
+	<p>To learn AJAX, you must be familiar with the XML<wbr>Http<wbr>Request Object.</p>
+	<p>Try to shrink the browser window, to view how the very long word in the paragraph below will break:</p>
+	<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.
+	</p>
+	<p><b>Note:</b> The wbr element is not supported in Internet Explorer 11 (or earlier).</p>
+</body>
+</html>
