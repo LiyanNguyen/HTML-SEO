@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Using Semantic Sectioning in HTML 5</title>
+</head>
+<body>
+	<!-- Content sectioning elements allow you to organize the document content into logical pieces. Use the sectioning elements to create a broad outline for your page content, including header and footer navigation, and heading elements to identify sections of content -->
+
+	<!-- List of Content Sectioning Elements: (14 total)
+	<header></header>
+	<nav></nav>
+	<main></main>
+	<section></section>
+	<article></article>
+	<aside></aside>
+	<footer></footer>
+	<address></address>
+	<h1></h1>
+	<h2></h2>
+	<h3></h3>
+	<h4></h4>
+	<h5></h5>
+	<h6></h6>
+	-->
+
+	<header>
+		<!-- represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements. -->
+
+		<nav>
+			<!-- represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes -->
+		</nav>
+	</header>
+
+	<main>
+		<!-- represents the dominant content of the body of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application. there should only be one <main> element in a document -->
+		<h1></h1>
+
+		<section>
+			<!-- represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it -->
+			<h2><!-- Sections should always have a heading, with very few exceptions --></h2>
+			<p></p>
+
+			<article>
+				<!-- represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content -->
+			</article>
+		</section>
+
+		<!-- a <section> can have multiple <article> inside it, and an <article> can have multiple <section> inside it, the difference is that, <section> should ALWAYS have a heading inside it-->
+		<section>
+			<h2></h2>
+			
+			<article><!-- this <article> has 2 <section> in it, both have different content -->
+				<section>
+					<h3></h3> <!-- typically only use h1 to h3 for SEO puposes, style them accordingly with CSS -->
+				</section>
+				<section>
+					<h3></h3>
+					<p></p>
+				</section>
+				<aside>
+					<!-- <aside> can also be used to support the main topic or content, further explanations, etc, something relevant to the main point -->
+				</aside>
+			</article>
+		</section>
+	</main>
+
+	<aside>
+		<!-- represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes -->
+	</aside>
+		
+	<footer>
+		<!-- represents a footer for its nearest sectioning content or sectioning root element. A <footer> typically contains information about the author of the section, copyright data or links to related documents. -->
+
+			<address>
+				<!-- indicates that the enclosed HTML provides contact information for a person or people, or for an organization -->
+			</address>
+	</footer>
+</body>
+</html>
