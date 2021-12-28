@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Using Semantic Imange and Multimedia in HTML 5</title>
+</head>
+<body>
+	<!-- HTML supports various multimedia resources such as images, audio, and video. -->
+
+	<!-- List of Image and Multimedia Elements: (6 total)
+	<area></area>
+	<audio></audio>
+	<img>
+	<map></map>
+	<video>
+		<track>
+	</video>
+	-->
+	
+	<!-- <area> defines an area inside an image map that has predefined clickable areas. An image map allows geometric areas on an image to be associated with hypertext link. This element is used only within a <map> element. -->
+	<map name="infographic">
+		<area shape="rect" coords="184,6,253,27"
+					href="https://mozilla.org"
+					target="_blank" alt="Mozilla" />
+		<area shape="circle" coords="130,136,60"
+					href="https://developer.mozilla.org/"
+					target="_blank" alt="MDN" />
+		<area shape="poly" coords="130,6,253,96,223,106,130,39"
+					href="https://developer.mozilla.org/docs/Web/Guide/Graphics"
+					target="_blank" alt="Graphics" />
+		<area shape="poly" coords="253,96,207,241,189,217,223,103"
+					href="https://developer.mozilla.org/docs/Web/HTML"
+					target="_blank" alt="HTML" />
+		<area shape="poly" coords="207,241,54,241,72,217,189,217"
+					href="https://developer.mozilla.org/docs/Web/JavaScript"
+					target="_blank" alt="JavaScript" />
+		<area shape="poly" coords="54,241,6,97,36,107,72,217"
+					href="https://developer.mozilla.org/docs/Web/API"
+					target="_blank" alt="Web APIs" />
+		<area shape="poly" coords="6,97,130,6,130,39,36,107"
+					href="https://developer.mozilla.org/docs/Web/CSS"
+					target="_blank" alt="CSS" />
+	</map>
+	<img style="display: block; margin: 0 auto; width: 260px; height: 248px;" usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info.png" alt="MDN infographic" />
+
+	<hr>
+	<!-- <audio> is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the <source> element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a MediaStream. -->
+	<figure style="margin: 0;">
+		<figcaption>Listen to the T-Rex:</figcaption>
+		<audio controls src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3">
+			Your browser does not support the
+			<code>audio</code> element.
+		</audio>
+	</figure>
+
+	<hr>
+	<!-- <img> embeds an image into the document. -->
+	<img style="width: 250px;" src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" alt="Grapefruit slice atop a pile of other slices">
+
+	<hr>
+	<!-- <map> is used with <area> elements to define an image map (a clickable link area). -->
+	<map name="infographic2">
+			<area shape="poly" coords="130,147,200,107,254,219,130,228"
+						href="https://developer.mozilla.org/docs/Web/HTML"
+						target="_blank" alt="HTML" />
+			<area shape="poly" coords="130,147,130,228,6,219,59,107"
+						href="https://developer.mozilla.org/docs/Web/CSS"
+						target="_blank" alt="CSS" />
+			<area shape="poly" coords="130,147,200,107,130,4,59,107"
+						href="https://developer.mozilla.org/docs/Web/JavaScript"
+						target="_blank" alt="JavaScript" />
+	</map>
+	<img style=" width: 260px; height: 232px;" usemap="#infographic2" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info2.png" alt="MDN infographic" />
+
+	<hr>
+	<!-- <track> is used as a child of the media elements, <audio> and <video>. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in WebVTT format (.vtt files) — Web Video Text Tracks. -->
+	<video style="width: 250px;" controls src="/media/cc0-videos/friday.mp4">
+		<track default kind="captions" srclang="en" src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4" />
+		Sorry, your browser doesn't support embedded videos.
+	</video>
+
+	<hr>
+	<!-- <video> HTML element embeds a media player which supports video playback into the document. You can use <video> for audio content as well, but the <audio> element may provide a more appropriate user experience. -->
+	<video controls width="250">
+		<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+		Sorry, your browser doesn't support embedded videos.
+	</video>
+
+	<!-- Embedded content In addition to regular multimedia content, HTML can include a variety of other content, even if it's not always easy to interact with. -->
+
+	<!-- List of Embedded Content Elements: (7 total)
+	<embed>
+	<iframe></iframe>
+	<object></object>
+	<param>
+	<picture></picture>
+	<portal>
+	<source>
+	-->
+	
+	<hr>
+	<!-- <embed> embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in. -->
+	
+	<embed type="video/webm" src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" width="250" height="200">
+
+	<hr>
+	<!-- <iframe> represents a nested browsing context, embedding another HTML page into the current one. -->
+	<iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed">
+	</iframe>
+
+
+	<hr>
+	<!-- <object> represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin. -->
+	<object type="application/pdf"
+    data="https://interactive-examples.mdn.mozilla.net/media/examples/In-CC0.pdf"
+    width="250"
+    height="200">
+	</object>
+
+	<hr>
+	<!-- <param> defines parameters for an <object> element. -->
+	<!-- Embed a flash movie -->
+	<object data="movie.swf" type="application/x-shockwave-flash"></object>
+	<!-- Embed a flash movie with parameters -->
+	<object data="movie.swf" type="application/x-shockwave-flash">
+		<param name="foo" value="bar">
+	</object>
+
+	<hr>
+	<!-- <picture> contains zero or more <source> elements and one <img> element to offer alternative versions of an image for different display/device scenarios. The browser will consider each child <source> element and choose the best match among them. If no matches are found—or the browser doesn't support the <picture> element—the URL of the <img> element's src attribute is selected. The selected image is then presented in the space occupied by the <img> element. -->
+	
+	<p>Change the browser window width to see the image change.</p>
+	<picture>
+		<source srcset="https://interactive-examples.mdn.mozilla.net/media/cc0-images/surfer-240-200.jpg" media="(min-width: 800px)">
+		<img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/painted-hand-298-332.jpg" alt="" />
+	</picture>
+
+	<br>
+	<picture>
+		<source media="(min-width:650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+		<source media="(min-width:465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+		<img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+	</picture>
+
+	<!-- <portal> enables the embedding of another HTML page into the current one for the purposes of allowing smoother navigation into new pages. A <portal> is similar to an <iframe>. An <iframe> allows a separate browsing context to be embedded. However, the embedded content of a <portal> is more limited than that of an <iframe>. It cannot be interacted with, and therefore is not suitable for embedding widgets into a document. Instead, the <portal> acts as a preview of the content of another page. It can be navigated into therefore allowing for seamless transition to the embedded content. -->
+
+	<hr>
+	<!-- <source> specifies multiple media resources for the <picture>, the <audio> element, or the <video> element. It is an empty element, meaning that it has no content and does not have a closing tag. It is commonly used to offer the same media content in multiple file formats in order to provide compatibility with a broad range of browsers given their differing support for image file formats and media file formats. -->
+	<video controls width="250" height="200" muted>
+		<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+		<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+		This browser does not support the HTML5 video element.
+	</video>
+
+
+	<hr>
+	<!-- <svg> element is a container that defines a new coordinate system and viewport. It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document. -->
+	
+	<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+		<circle cx="50" cy="50" r="40" />
+		<circle cx="150" cy="50" r="4" />
+	
+		<svg viewBox="0 0 10 10" x="200" width="100">
+			<circle cx="5" cy="5" r="4" />
+		</svg>
+	</svg>
+
+	<hr>
+	<!-- The top-level element in MathML is <math>. Every valid MathML instance must be wrapped in <math> tags. In addition you must not nest a second <math> element in another, but you can have an arbitrary number of other child elements in it. -->
+	<math>
+		<mrow>
+			<mrow>
+				<msup>
+					<mi>a</mi>
+					<mn>2</mn>
+				</msup>
+				<mo>+</mo>
+				<msup>
+					<mi>b</mi>
+					<mn>2</mn>
+				</msup>
+			</mrow>
+			<mo>=</mo>
+			<msup>
+				<mi>c</mi>
+				<mn>2</mn>
+			</msup>
+		</mrow>
+	</math>
+	
+</body>
+</html>

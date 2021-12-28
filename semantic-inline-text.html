@@ -4,13 +4,41 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Using Semantic Inline Text in HTML 5</title>
+	<title>Using Semantic Inline Text and Demarcating Edits in HTML 5</title>
 </head>
 <body>
 	<!-- Use the HTML inline text semantic to define the meaning, structure, or style of a word, line, or any arbitrary piece of text -->
 
-	<!-- List of Content Sectioning Elements: (29 total)
-	
+	<!-- List of Inline Text Elements: (29 total)
+	<a>
+	<abbr>
+	<b>
+	<bdi>
+	<bdo>
+	<br>
+	<cite>
+	<code>
+	<data>
+	<dfn>
+	<em>
+	<i>
+	<kbd>
+	<mark>
+	<q>
+	<ruby>
+		<rp>
+			<rt>
+	<s>
+	<samp>
+	<small>
+	<span>
+	<strong>
+	<sub>
+	<sup>
+	<time>
+	<u>
+	<var>
+	<wbr>
 	-->
 
 	
@@ -197,5 +225,30 @@
 	<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.
 	</p>
 	<p><b>Note:</b> The wbr element is not supported in Internet Explorer 11 (or earlier).</p>
+
+	<!-- Demarcating edits These elements let you provide indications that specific parts of the text have been altered. -->
+
+	<!-- List of Inline Text Elements: (2 total)
+	<ins></ins>
+	<del></del>
+	-->
+	<hr>
+	<!-- <del> represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The <ins> element can be used for the opposite purpose: to indicate text that has been added to the document. -->
+	<blockquote style="border-left: 3px solid #d7d7db; padding-left: 15px;">
+		There is <del style="background-color: #fbb; color: #555">nothing</del> <ins style="background-color: #d4fcbc; text-decoration: none;">no code</ins> either good or bad, but <del style="background-color: #fbb; color: #555">thinking</del> <ins style="background-color: #d4fcbc; text-decoration: none;">running it</ins> makes
+		it so.
+	</blockquote>
+
+
+	<hr>
+	<!-- <ins> represents a range of text that has been added to a document. You can use the <del> element to similarly represent a range of text that has been deleted from the document -->
+	<p>“You're late!”</p>
+	<del style="background-color: #fbb; text-decoration: none; position: relative; display: block;">
+		<p>“I apologize for the delay.”</p>
+	</del>
+	<ins style="background-color: #d4fcbc; text-decoration: none; position: relative; display: block;" cite="../howtobeawizard.html" datetime="2018-05">
+		<p>“A wizard is never late …”</p>
+	</ins>
+
 </body>
 </html>
