@@ -1,0 +1,38 @@
+:root {
+	font-size: 62.5%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.section-1 {
+	min-height: 33.3vh;
+	background-color: blueviolet;
+	color: white;
+}
+
+.section-1-heading {
+	font-size: 3rem;
+}
+
+.section-2 {
+	min-height: 33.3vh;
+	background-color: darkcyan;
+	color: white;
+}
+
+.section-2-heading {
+	font-size: 3rem;
+}
+
+.section-3 {
+	min-height: 33.3vh;
+	background-color: darksalmon;
+	color: white;
+}
+
+.section-3-heading {
+	font-size: 3rem;
+}

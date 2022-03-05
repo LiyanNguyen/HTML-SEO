@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proper Way of Using Section Element</title>
+	<link rel="stylesheet" href="proper-sectioning.css">
+</head>
+<body>
+	<!-- Reference Video: https://www.youtube.com/watch?v=ULdkpU51hTQ -->
+	<!-- use "aria-labelledby" if you have a meaningful heading inside a section that describes that section  -->
+	<section aria-labelledby="section-1-title" class="section-1">
+		<h1 id="section-1-title" class="section-1-heading">Perfect Section Title use "aria-labelledby"</h1>
+		<p>some other content inside section 1</p>
+	</section>
+	<!-- otherwise use "aria-label" to describe your section -->
+	<section aria-label="section-2-title" class="section-2">
+		<h1 class="section-2-heading">Not A Good Section Title use "aria-label"</h1>
+		<p>some other content inside section 2</p>
+	</section>
+	<!-- you can also use "title" similarly to an "aria-label" but it is hoverable that shows the title -->
+	<section title="This title appears when you mouse over this section" class="section-3">
+		<h1 class="section-3-heading">Not A Good Section Title can also use "title" and makes the title appear on hover</h1>
+		<p>some other content inside section 3</p>
+	</section>
+</body>
+</html>
